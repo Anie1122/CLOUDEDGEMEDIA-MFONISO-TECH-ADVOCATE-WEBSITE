@@ -214,6 +214,47 @@
             transform: translateY(-3px);
         }
 
+
+        .logo-spot {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background: url('/assets/logo-cloud-edge.svg') center/contain no-repeat;
+            opacity: 0.10;
+            filter: drop-shadow(0 0 18px rgba(0, 212, 255, 0.35));
+            pointer-events: none;
+            animation: spinLogo 32s linear infinite;
+            z-index: 1;
+        }
+
+        .logo-spot.alt {
+            width: 130px;
+            height: 130px;
+            opacity: 0.08;
+            animation-duration: 44s;
+            animation-direction: reverse;
+        }
+
+        @keyframes spinLogo {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero .logo-spot { top: 16%; right: 10%; }
+        .hero .logo-spot.alt { bottom: 12%; left: 8%; }
+
+        #resume,
+        #portfolio,
+        #contact {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #resume .logo-spot { top: 12%; left: 4%; }
+        #portfolio .logo-spot { bottom: 10%; right: 5%; }
+        #contact .logo-spot { top: 8%; right: 8%; }
+
+
         /* Section Styles */
         section {
             padding: 6rem 5%;
@@ -790,6 +831,12 @@
             transform: translateY(0);
         }
 
+
+        section > *:not(.logo-spot) {
+            position: relative;
+            z-index: 2;
+        }
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
@@ -825,6 +872,8 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <span class="logo-spot"></span>
+        <span class="logo-spot alt"></span>
         <div class="hero-content">
             <div class="hero-badge">Welcome to my Portfolio</div>
             <h1>MFONISO UBONG</h1>
@@ -868,6 +917,7 @@
 
     <!-- Resume Section -->
     <section id="resume" class="fade-in">
+        <span class="logo-spot alt"></span>
         <div class="section-header">
             <span class="section-tag">RESUME</span>
             <h2>My Experience & Skills</h2>
@@ -1008,6 +1058,7 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="fade-in">
+        <span class="logo-spot"></span>
         <div class="section-header">
             <span class="section-tag">PORTFOLIO</span>
             <h2>My Recent Works</h2>
@@ -1044,6 +1095,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="fade-in">
+        <span class="logo-spot alt"></span>
         <div class="section-header">
             <span class="section-tag">CONTACT</span>
             <h2>Let's Work Together</h2>
