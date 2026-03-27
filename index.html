@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mfoniso Ubong | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Mfoniso Ubong | Graphic Designer & Tech Advocate Portfolio</title>
+    <meta name="description" content="Mfoniso Ubong is a Graphic Designer, Tech Advocate, and Media Expert showcasing branding, social media, and creative design projects.">
+    <meta name="keywords" content="Mfoniso Ubong, graphic designer, tech advocate, media expert, portfolio, branding, social media design">
+    <meta name="author" content="Mfoniso Ubong">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -21,6 +26,10 @@
             --glow-blue: 0 0 20px rgba(0, 212, 255, 0.5);
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: var(--dark-bg);
@@ -29,7 +38,6 @@
             line-height: 1.6;
         }
 
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -47,6 +55,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1rem;
         }
 
         .logo {
@@ -60,12 +69,15 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            white-space: nowrap;
         }
 
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             list-style: none;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
 
         .nav-links a {
@@ -102,7 +114,6 @@
             text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
         }
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -111,6 +122,8 @@
             position: relative;
             background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a0a 100%);
             overflow: hidden;
+            padding-top: 100px;
+            max-width: 100%;
         }
 
         .hero::before {
@@ -133,6 +146,7 @@
             text-align: center;
             z-index: 2;
             padding: 2rem;
+            will-change: transform, opacity;
         }
 
         .hero-badge {
@@ -168,7 +182,7 @@
             font-size: 1.3rem;
             color: var(--text-secondary);
             margin-bottom: 2rem;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -177,6 +191,8 @@
             display: inline-flex;
             gap: 1rem;
             margin-top: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .btn {
@@ -190,6 +206,9 @@
             letter-spacing: 1px;
             position: relative;
             overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .btn-primary {
@@ -214,12 +233,11 @@
             transform: translateY(-3px);
         }
 
-
         .logo-spot {
             position: absolute;
             width: 180px;
             height: 180px;
-            background: url('/assets/logo-cloud-edge.svg') center/contain no-repeat;
+            background: url('assets/logo-cloud-edge.svg') center/contain no-repeat;
             opacity: 0.18;
             filter: drop-shadow(0 0 28px rgba(90, 220, 255, 0.55));
             pointer-events: none;
@@ -254,8 +272,6 @@
         #portfolio .logo-spot { bottom: 10%; right: 5%; }
         #contact .logo-spot { top: 8%; right: 8%; }
 
-
-        /* Section Styles */
         section {
             padding: 6rem 5%;
             max-width: 1400px;
@@ -285,7 +301,6 @@
             margin-bottom: 1rem;
         }
 
-        /* About Section */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -352,176 +367,84 @@
         .skill-tag:hover {
             background: rgba(0, 212, 255, 0.1);
             border-color: var(--primary-blue);
-            color: var(--primary-blue);
             transform: translateY(-2px);
         }
 
-        /* Resume Section */
         .resume-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
 
         .resume-card {
             background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 2rem;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .resume-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-blue), transparent);
-            transform: scaleX(0);
-            transition: transform 0.3s;
-        }
-
-        .resume-card:hover::before {
-            transform: scaleX(1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
         }
 
         .resume-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(0, 212, 255, 0.3);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            border-color: rgba(0, 212, 255, 0.4);
+            box-shadow: var(--glow-blue);
         }
 
         .resume-card h3 {
             font-family: 'Orbitron', monospace;
             color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .resume-card p,
+        .resume-card li {
+            color: var(--text-secondary);
+        }
+
+        .resume-card ul {
+            padding-left: 1.2rem;
         }
 
         .skill-bar {
-            margin-bottom: 1.5rem;
-        }
-
-        .skill-bar-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        .skill-bar-bg {
-            height: 6px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 3px;
+            width: 100%;
+            height: 10px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 999px;
             overflow: hidden;
+            margin-top: 0.6rem;
+            margin-bottom: 1rem;
         }
 
         .skill-bar-fill {
             height: 100%;
-            background: linear-gradient(90deg, var(--primary-blue), #0066ff);
-            border-radius: 3px;
-            transition: width 1s ease-out;
-            position: relative;
+            background: linear-gradient(90deg, #00d4ff, #66f0ff);
+            border-radius: 999px;
+            transition: width 1s ease;
         }
 
-        .skill-bar-fill::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 20px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3));
-            animation: shimmer 2s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-20px); }
-            100% { transform: translateX(20px); }
-        }
-
-        .experience-item {
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
-            border-left: 2px solid rgba(0, 212, 255, 0.3);
-            position: relative;
-        }
-
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            left: -6px;
-            top: 0;
-            width: 10px;
-            height: 10px;
-            background: var(--primary-blue);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--primary-blue);
-        }
-
-        .experience-item h4 {
-            font-size: 1rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .experience-item p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .check-list {
-            list-style: none;
-        }
-
-        .check-list li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            color: var(--text-secondary);
-        }
-
-        .check-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--primary-blue);
-            font-weight: bold;
-        }
-
-        /* Portfolio Section */
         .portfolio-filter {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
             flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
         }
 
         .filter-btn {
-            padding: 0.8rem 1.5rem;
+            padding: 0.7rem 1.3rem;
+            border-radius: 999px;
+            border: 1px solid var(--primary-blue);
             background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: var(--text-secondary);
-            border-radius: 50px;
-            cursor: pointer;
+            color: var(--primary-blue);
             font-family: 'Orbitron', monospace;
-            font-size: 0.85rem;
-            transition: all 0.3s;
+            cursor: pointer;
+            transition: 0.3s;
         }
 
         .filter-btn:hover,
         .filter-btn.active {
             background: var(--primary-blue);
             color: #000;
-            border-color: var(--primary-blue);
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
         }
 
         .portfolio-grid {
@@ -532,13 +455,12 @@
 
         .portfolio-item {
             position: relative;
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
-            aspect-ratio: 1;
-            cursor: pointer;
-            group: true;
+            aspect-ratio: 4 / 3;
             border: 1px solid rgba(255, 255, 255, 0.1);
             background: var(--card-bg);
+            cursor: pointer;
         }
 
         .portfolio-item img {
@@ -546,6 +468,7 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
+            display: block;
         }
 
         .portfolio-overlay {
@@ -560,11 +483,13 @@
             transition: opacity 0.3s;
         }
 
-        .portfolio-item:hover img {
-            transform: scale(1.1);
+        .portfolio-item:hover img,
+        .portfolio-item:focus img {
+            transform: scale(1.06);
         }
 
-        .portfolio-item:hover .portfolio-overlay {
+        .portfolio-item:hover .portfolio-overlay,
+        .portfolio-item:focus .portfolio-overlay {
             opacity: 1;
         }
 
@@ -597,11 +522,11 @@
             transition: transform 0.3s;
         }
 
-        .portfolio-item:hover .portfolio-view {
+        .portfolio-item:hover .portfolio-view,
+        .portfolio-item:focus .portfolio-view {
             transform: translate(-50%, -50%) scale(1);
         }
 
-        /* Lightbox */
         .lightbox {
             position: fixed;
             inset: 0;
@@ -672,7 +597,6 @@
         .lightbox-prev { left: -80px; }
         .lightbox-next { right: -80px; }
 
-        /* Contact Section */
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -717,6 +641,7 @@
             justify-content: center;
             color: var(--primary-blue);
             font-size: 1.3rem;
+            flex-shrink: 0;
         }
 
         .contact-details h4 {
@@ -728,12 +653,14 @@
         .contact-details p {
             font-size: 1.1rem;
             font-weight: 600;
+            word-break: break-word;
         }
 
         .social-links {
             display: flex;
             gap: 1rem;
             margin-top: 2rem;
+            flex-wrap: wrap;
         }
 
         .social-btn {
@@ -758,7 +685,6 @@
             box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 3rem 2rem;
@@ -771,13 +697,13 @@
             color: var(--primary-blue);
         }
 
-
         .portfolio-slider-controls {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 1rem;
             margin-top: 2rem;
+            flex-wrap: wrap;
         }
 
         .slide-btn {
@@ -795,31 +721,6 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive */
-        @media (max-width: 968px) {
-            .about-grid,
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .resume-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-links {
-                gap: 1.5rem;
-                font-size: 0.8rem;
-            }
-            
-            .lightbox-prev { left: 20px; }
-            .lightbox-next { right: 20px; }
-        }
-
-        /* Scroll Animations */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -831,13 +732,11 @@
             transform: translateY(0);
         }
 
-
         section > *:not(.logo-spot) {
             position: relative;
             z-index: 2;
         }
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -850,14 +749,65 @@
             background: var(--primary-blue);
             border-radius: 5px;
         }
+
+        @media (max-width: 968px) {
+            nav {
+                padding: 1rem 5%;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .about-grid,
+            .contact-container,
+            .resume-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lightbox-prev { left: 20px; }
+            .lightbox-next { right: 20px; }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .logo {
+                font-size: 1.15rem;
+            }
+
+            .nav-links a {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="#" class="logo">
+            <a href="#home" class="logo">
                 <span>◆</span> CLOUD EDGE MEDIA
             </a>
             <ul class="nav-links">
@@ -870,14 +820,13 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <span class="logo-spot"></span>
         <span class="logo-spot alt"></span>
         <div class="hero-content">
             <div class="hero-badge">Welcome to my Portfolio</div>
             <h1>MFONISO UBONG</h1>
-            <p class="hero-subtitle">Tech Advocate / Graphics Designer / Media Expert with 4+ years of experience creating stunning visual experiences</p>
+            <p class="hero-subtitle">Tech Advocate, Graphic Designer, and Media Expert with 4+ years of experience creating stunning visual experiences.</p>
             <div class="hero-cta">
                 <a href="#portfolio" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn btn-secondary">Get In Touch</a>
@@ -885,7 +834,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="fade-in">
         <div class="section-header">
             <span class="section-tag">ABOUT ME</span>
@@ -893,303 +841,204 @@
         </div>
         <div class="about-grid">
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop" alt="Mfoniso Ubong">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop" alt="Portrait representing Mfoniso Ubong">
             </div>
             <div class="about-content">
-                <h3>Designing at the Intersection of Creativity & Intelligence</h3>
-                <p>I don't just rely on traditional design skills — I integrate AI-powered tools into my workflow to enhance precision, speed, innovation, and creative exploration.</p>
-                <p>This allows me to generate stronger concepts, test visual directions faster, and deliver cutting-edge results that stand out in today's digital space.</p>
-                <p><strong>AI doesn't replace my creativity — it amplifies it.</strong></p>
-                
+                <h3>Designing at the Intersection of Creativity &amp; Intelligence</h3>
+                <p>I do not rely on traditional design skills alone. I integrate AI-powered tools into my workflow to improve precision, speed, innovation, and creative exploration.</p>
+                <p>I create designs that do more than look beautiful. They communicate clearly, connect with audiences, and help brands stand out in a crowded digital space.</p>
+                <p>My work combines strategy, visual storytelling, and clean execution to deliver results across branding, social media, promotions, and digital campaigns.</p>
                 <div class="skills-list">
-                    <span class="skill-tag">Human Creativity</span>
-                    <span class="skill-tag">Strategic Thinking</span>
-                    <span class="skill-tag">AI-Driven Enhancement</span>
-                    <span class="skill-tag">Brand Psychology</span>
-                    <span class="skill-tag">Detail-Focused Execution</span>
-                    <span class="skill-tag">Web3 Design</span>
-                    <span class="skill-tag">Social Media</span>
-                    <span class="skill-tag">Logo Design</span>
+                    <span class="skill-tag">Graphic Design</span>
+                    <span class="skill-tag">Brand Identity</span>
+                    <span class="skill-tag">Social Media Design</span>
+                    <span class="skill-tag">Tech Advocacy</span>
+                    <span class="skill-tag">AI Workflow</span>
+                    <span class="skill-tag">Creative Direction</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Resume Section -->
     <section id="resume" class="fade-in">
-        <span class="logo-spot alt"></span>
+        <span class="logo-spot"></span>
         <div class="section-header">
             <span class="section-tag">RESUME</span>
-            <h2>My Experience & Skills</h2>
+            <h2>What I Bring</h2>
         </div>
+
         <div class="resume-grid">
-            <!-- Software Skills -->
             <div class="resume-card">
-                <h3>⚡ Software Skills</h3>
-                
-                <div class="skill-bar">
-                    <div class="skill-bar-header">
-                        <span>Photoshop</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="skill-bar-bg">
-                        <div class="skill-bar-fill" style="width: 90%"></div>
-                    </div>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="skill-bar-header">
-                        <span>Premiere Pro</span>
-                        <span>75%</span>
-                    </div>
-                    <div class="skill-bar-bg">
-                        <div class="skill-bar-fill" style="width: 75%"></div>
-                    </div>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="skill-bar-header">
-                        <span>Illustrator</span>
-                        <span>50%</span>
-                    </div>
-                    <div class="skill-bar-bg">
-                        <div class="skill-bar-fill" style="width: 50%"></div>
-                    </div>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="skill-bar-header">
-                        <span>Lightroom</span>
-                        <span>100%</span>
-                    </div>
-                    <div class="skill-bar-bg">
-                        <div class="skill-bar-fill" style="width: 100%"></div>
-                    </div>
-                </div>
+                <h3>Profile</h3>
+                <p>I am a Graphic Designer, Tech Advocate, and Media Expert focused on creating compelling digital visuals and brand experiences. I help businesses, creators, and organizations communicate with clarity and style.</p>
             </div>
 
-            <!-- What I Can Do -->
             <div class="resume-card">
-                <h3>🎯 What Can I Do?</h3>
-                <ul class="check-list">
-                    <li>Logo Design</li>
-                    <li>Graphics/Flyer Design</li>
-                    <li>Branding</li>
-                    <li>Video Editing</li>
-                    <li>Advertisement</li>
-                    <li>Media Management</li>
-                    <li>Photography</li>
-                    <li>Artificial Intelligence</li>
-                    <li>Web3 Design</li>
+                <h3>Core Services</h3>
+                <ul>
+                    <li>Flyer and social media design</li>
+                    <li>Brand identity and campaign visuals</li>
+                    <li>Creative design for promotions and events</li>
+                    <li>Visual storytelling for digital brands</li>
+                    <li>Design support enhanced by AI tools</li>
                 </ul>
             </div>
 
-            <!-- Experience -->
             <div class="resume-card">
-                <h3>💼 Experience</h3>
-                
-                <div class="experience-item">
-                    <h4>CEO/Media Manager</h4>
-                    <p>Cloud Edge Media<br>(2022 - Present)</p>
-                </div>
+                <h3>Professional Strengths</h3>
+                <p>Adobe Photoshop</p>
+                <div class="skill-bar"><div class="skill-bar-fill" style="width: 95%;"></div></div>
 
-                <div class="experience-item">
-                    <h4>Photographer</h4>
-                    <p>IBC ANUA<br>(2023 - Present)</p>
-                </div>
+                <p>Brand Design</p>
+                <div class="skill-bar"><div class="skill-bar-fill" style="width: 92%;"></div></div>
 
-                <div class="experience-item">
-                    <h4>Graphics Designer</h4>
-                    <p>The Moffat Brothers<br>(2024 - Present)</p>
-                </div>
+                <p>Social Media Graphics</p>
+                <div class="skill-bar"><div class="skill-bar-fill" style="width: 96%;"></div></div>
+
+                <p>Creative Strategy</p>
+                <div class="skill-bar"><div class="skill-bar-fill" style="width: 88%;"></div></div>
             </div>
 
-            <!-- Education -->
             <div class="resume-card">
-                <h3>🎓 Education</h3>
-                <div class="experience-item">
-                    <h4>HND in Engineering</h4>
-                    <p>Higher National Diploma</p>
-                </div>
-                <div class="experience-item">
-                    <h4>BSc in Computer Science</h4>
-                    <p>Bachelor of Science</p>
-                </div>
-            </div>
-
-            <!-- Languages -->
-            <div class="resume-card">
-                <h3>🌍 Languages</h3>
-                
-                <div class="skill-bar">
-                    <div class="skill-bar-header">
-                        <span>English</span>
-                        <span>100%</span>
-                    </div>
-                    <div class="skill-bar-bg">
-                        <div class="skill-bar-fill" style="width: 100%"></div>
-                    </div>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="skill-bar-header">
-                        <span>Spanish</span>
-                        <span>50%</span>
-                    </div>
-                    <div class="skill-bar-bg">
-                        <div class="skill-bar-fill" style="width: 50%"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Design/Tech Skills -->
-            <div class="resume-card">
-                <h3>🛠️ Design/Tech Skills</h3>
-                <ul class="check-list">
-                    <li>Graphics Designing</li>
-                    <li>Photography</li>
-                    <li>Video Editing</li>
-                    <li>Artificial Intelligence</li>
-                    <li>Web3</li>
+                <h3>Why Work With Me?</h3>
+                <ul>
+                    <li>Clean, modern, and message-driven design</li>
+                    <li>Strong understanding of audience appeal</li>
+                    <li>Fast and adaptive creative workflow</li>
+                    <li>Balanced blend of design skill and tech insight</li>
+                    <li>Committed to quality and professionalism</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section id="portfolio" class="fade-in">
         <span class="logo-spot"></span>
         <div class="section-header">
             <span class="section-tag">PORTFOLIO</span>
-            <h2>My Recent Works</h2>
+            <h2>Selected Works</h2>
         </div>
 
         <div class="portfolio-filter">
-            <button class="filter-btn active" data-filter="all">All Works</button>
-            <button class="filter-btn" data-filter="social">Social Media</button>
-            <button class="filter-btn" data-filter="logo">Logo Designs</button>
-            <button class="filter-btn" data-filter="brand">Brand Design</button>
-            <button class="filter-btn" data-filter="web3">Web3 Designs</button>
-            <button class="filter-btn" data-filter="other">Others</button>
+            <button class="filter-btn active" data-filter="all" type="button">All</button>
+            <button class="filter-btn" data-filter="social" type="button">Social</button>
+            <button class="filter-btn" data-filter="brand" type="button">Brand</button>
+            <button class="filter-btn" data-filter="web3" type="button">Web3</button>
+            <button class="filter-btn" data-filter="other" type="button">Other</button>
         </div>
 
-        <div class="portfolio-grid" id="portfolioGrid">
-            <!-- Items will be populated by JavaScript -->
-        </div>
+        <div class="portfolio-grid" id="portfolioGrid"></div>
+
         <div class="portfolio-slider-controls">
-            <button class="slide-btn" id="prevSlideBtn" type="button">◀ Previous</button>
-            <span class="slide-indicator" id="slideIndicator">1 / 1</span>
-            <button class="slide-btn" id="nextSlideBtn" type="button">Next ▶</button>
+            <button id="prevSlideBtn" class="slide-btn" type="button">Previous</button>
+            <span id="slideIndicator" class="slide-indicator">1 / 1</span>
+            <button id="nextSlideBtn" class="slide-btn" type="button">Next</button>
         </div>
     </section>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-content">
-            <button class="lightbox-close" onclick="closeLightbox()">×</button>
-            <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1)">‹</button>
-            <button class="lightbox-nav lightbox-next" onclick="changeImage(1)">›</button>
-            <img id="lightboxImg" src="" alt="">
-        </div>
-    </div>
-
-    <!-- Contact Section -->
     <section id="contact" class="fade-in">
-        <span class="logo-spot alt"></span>
+        <span class="logo-spot"></span>
         <div class="section-header">
             <span class="section-tag">CONTACT</span>
-            <h2>Let's Work Together</h2>
+            <h2>Let’s Work Together</h2>
         </div>
-        
+
         <div class="contact-container">
             <div class="contact-info">
-                <h3>Get In Touch</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Ready to elevate your brand? Let's create something amazing together.</p>
-                
-                <a href="mailto:mfonisobassey851@gmail.com" class="contact-item">
+                <h3>Get in Touch</h3>
+
+                <a class="contact-item" href="mailto:your@email.com">
                     <div class="contact-icon">✉</div>
                     <div class="contact-details">
                         <h4>Email</h4>
-                        <p>mfonisobassey851@gmail.com</p>
+                        <p>your@email.com</p>
                     </div>
                 </a>
 
-                <a href="tel:+2348104139916" class="contact-item">
-                    <div class="contact-icon">📞</div>
+                <a class="contact-item" href="tel:+2340000000000">
+                    <div class="contact-icon">☎</div>
                     <div class="contact-details">
                         <h4>Phone</h4>
-                        <p>+234 810 413 9916</p>
+                        <p>+234 000 000 0000</p>
                     </div>
                 </a>
 
-                <a href="https://wa.me/2348104139916" class="contact-item">
+                <a class="contact-item" href="https://wa.me/2340000000000" target="_blank" rel="noopener noreferrer">
                     <div class="contact-icon">💬</div>
                     <div class="contact-details">
                         <h4>WhatsApp</h4>
-                        <p>+234 810 413 9916</p>
+                        <p>Chat on WhatsApp</p>
                     </div>
                 </a>
 
                 <div class="social-links">
-                    <a href="#" class="social-btn" title="Facebook">f</a>
-                    <a href="#" class="social-btn" title="Instagram">📷</a>
-                    <a href="#" class="social-btn" title="LinkedIn">in</a>
+                    <a href="#" class="social-btn" title="Facebook" aria-label="Facebook">f</a>
+                    <a href="#" class="social-btn" title="Instagram" aria-label="Instagram">📷</a>
+                    <a href="#" class="social-btn" title="LinkedIn" aria-label="LinkedIn">in</a>
                 </div>
             </div>
 
-            <div class="contact-info">
-                <h3>Why Me?</h3>
-                <div style="background: var(--card-bg); padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
-                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
-                        <strong style="color: var(--primary-blue);">Because I design at the intersection of creativity and intelligence.</strong>
-                    </p>
-                    <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
-                        I don't just rely on traditional design skills — I integrate AI-powered tools into my workflow to enhance precision, speed, innovation, and creative exploration.
-                    </p>
-                    <p style="color: var(--text-secondary); line-height: 1.8;">
-                        You're not just hiring a graphic designer. You're choosing a <strong style="color: #fff;">future-ready creative partner.</strong>
-                    </p>
-                </div>
+            <div class="resume-card">
+                <h3>Available For</h3>
+                <ul>
+                    <li>Brand and promotional design projects</li>
+                    <li>Social media content design</li>
+                    <li>Event and campaign visuals</li>
+                    <li>Creative collaborations</li>
+                    <li>Tech and media-related design support</li>
+                </ul>
+                <p style="margin-top: 1rem;">Ready to bring your ideas to life with smart, impactful visuals.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <div class="lightbox-content">
+            <button class="lightbox-close" type="button" onclick="closeLightbox()" aria-label="Close lightbox">&times;</button>
+            <button class="lightbox-nav lightbox-prev" type="button" onclick="changeImage(-1)" aria-label="Previous image">&#10094;</button>
+            <img id="lightboxImg" src="" alt="Portfolio preview">
+            <button class="lightbox-nav lightbox-next" type="button" onclick="changeImage(1)" aria-label="Next image">&#10095;</button>
+        </div>
+    </div>
+
     <footer>
-        <p>© 2024 <span>Mfoniso Ubong</span>. All rights reserved. | Designed with 💙 by Cloud Edge Media</p>
+        <p>© 2026 <span>Mfoniso Ubong</span>. All rights reserved. | Designed with 💙 by Cloud Edge Media</p>
     </footer>
 
     <script>
-        // Portfolio Data - Replace these URLs with your actual image URLs when you host them
         const portfolioItems = [
-            { id: 1, category: 'social', title: 'Shop Your Gadgets', img: '/assets/works/shop-your-gadgets.svg' },
-            { id: 2, category: 'web3', title: 'Wanna Make Cool Cash', img: '/assets/works/wanna-make-cool-cash.svg' },
-            { id: 3, category: 'brand', title: 'Energy Reload', img: '/assets/works/energy-reload.svg' },
-            { id: 4, category: 'other', title: 'Ash Wednesday', img: '/assets/works/ash-wednesday.svg' },
-            { id: 5, category: 'social', title: 'Welcome to March', img: '/assets/works/welcome-to-march.svg' },
-            { id: 6, category: 'brand', title: 'Transform Your Social Media Presence', img: '/assets/works/transform-social-media-presence.svg' },
-            { id: 7, category: 'brand', title: 'Invest in Solar Properties', img: '/assets/works/invest-solar-properties.svg' },
-            { id: 8, category: 'brand', title: 'Sprite Campaign', img: '/assets/works/sprite-campaign.svg' },
-            { id: 9, category: 'brand', title: 'Elevate Your Brand', img: '/assets/works/elevate-your-brand.svg' },
-            { id: 10, category: 'other', title: "Becky's Glamour", img: '/assets/works/beckys-glamour.svg' },
-            { id: 11, category: 'other', title: 'One Bite Shawarma', img: '/assets/works/one-bite-shawarma.svg' },
-            { id: 12, category: 'other', title: 'Praise & Worship', img: '/assets/works/praise-and-worship.svg' },
-            { id: 13, category: 'other', title: 'Communion Service', img: '/assets/works/communion-service.svg' },
-            { id: 14, category: 'other', title: 'Taking Immediate Action', img: '/assets/works/taking-immediate-action.svg' },
-            { id: 15, category: 'social', title: 'Portfolio Landing Slide', img: '/assets/works/portfolio-landing-slide.svg' },
-            { id: 16, category: 'social', title: 'Resume Slide', img: '/assets/works/resume-slide.svg' },
-            { id: 17, category: 'social', title: 'Home Slide', img: '/assets/works/home-slide.svg' },
-            { id: 18, category: 'other', title: 'Take That Bold Step', img: '/assets/works/take-that-bold-step.svg' },
-            { id: 19, category: 'social', title: 'Welcome to February', img: '/assets/works/welcome-to-february.svg' },
-            { id: 20, category: 'other', title: 'Others Grid Showcase', img: '/assets/works/others-grid-showcase.svg' }
+            { id: 1, category: 'social', title: 'Shop Your Gadgets', img: 'assets/works/shop-your-gadgets.svg' },
+            { id: 2, category: 'web3', title: 'Wanna Make Cool Cash', img: 'assets/works/wanna-make-cool-cash.svg' },
+            { id: 3, category: 'brand', title: 'Energy Reload', img: 'assets/works/energy-reload.svg' },
+            { id: 4, category: 'other', title: 'Ash Wednesday', img: 'assets/works/ash-wednesday.svg' },
+            { id: 5, category: 'social', title: 'Welcome to March', img: 'assets/works/welcome-to-march.svg' },
+            { id: 6, category: 'brand', title: 'Transform Your Social Media Presence', img: 'assets/works/transform-social-media-presence.svg' },
+            { id: 7, category: 'brand', title: 'Invest in Solar Properties', img: 'assets/works/invest-solar-properties.svg' },
+            { id: 8, category: 'brand', title: 'Sprite Campaign', img: 'assets/works/sprite-campaign.svg' },
+            { id: 9, category: 'brand', title: 'Elevate Your Brand', img: 'assets/works/elevate-your-brand.svg' },
+            { id: 10, category: 'other', title: "Becky's Glamour", img: 'assets/works/beckys-glamour.svg' },
+            { id: 11, category: 'other', title: 'One Bite Shawarma', img: 'assets/works/one-bite-shawarma.svg' },
+            { id: 12, category: 'other', title: 'Praise & Worship', img: 'assets/works/praise-and-worship.svg' },
+            { id: 13, category: 'other', title: 'Communion Service', img: 'assets/works/communion-service.svg' },
+            { id: 14, category: 'other', title: 'Taking Immediate Action', img: 'assets/works/taking-immediate-action.svg' },
+            { id: 15, category: 'social', title: 'Portfolio Landing Slide', img: 'assets/works/portfolio-landing-slide.svg' },
+            { id: 16, category: 'social', title: 'Resume Slide', img: 'assets/works/resume-slide.svg' },
+            { id: 17, category: 'social', title: 'Home Slide', img: 'assets/works/home-slide.svg' },
+            { id: 18, category: 'other', title: 'Take That Bold Step', img: 'assets/works/take-that-bold-step.svg' },
+            { id: 19, category: 'social', title: 'Welcome to February', img: 'assets/works/welcome-to-february.svg' },
+            { id: 20, category: 'other', title: 'Others Grid Showcase', img: 'assets/works/others-grid-showcase.svg' }
         ];
 
         let currentImageIndex = 0;
         let filteredItems = portfolioItems;
         let slideIndex = 0;
         const worksPerSlide = 2;
+        let autoSlideInterval;
 
-        // Initialize Portfolio
+        function getActiveFilter() {
+            return document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
+        }
+
         function renderPortfolio(filter = 'all') {
             const grid = document.getElementById('portfolioGrid');
             const indicator = document.getElementById('slideIndicator');
@@ -1206,10 +1055,12 @@
             const visibleItems = filteredItems.slice(start, start + worksPerSlide);
 
             visibleItems.forEach((item, index) => {
-                const div = document.createElement('div');
-                div.className = 'portfolio-item';
-                div.onclick = () => openLightbox(start + index);
-                div.innerHTML = `
+                const button = document.createElement('button');
+                button.className = 'portfolio-item';
+                button.type = 'button';
+                button.setAttribute('aria-label', `Open ${item.title}`);
+                button.addEventListener('click', () => openLightbox(start + index));
+                button.innerHTML = `
                     <img src="${item.img}" alt="${item.title}" loading="lazy">
                     <div class="portfolio-overlay">
                         <div class="portfolio-view">+</div>
@@ -1217,52 +1068,60 @@
                         <div class="portfolio-title">${item.title}</div>
                     </div>
                 `;
-                grid.appendChild(div);
+                grid.appendChild(button);
             });
 
             indicator.textContent = `${slideIndex + 1} / ${totalSlides}`;
         }
 
-        // Filter Buttons
+        function restartAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(() => {
+                const totalSlides = Math.max(1, Math.ceil(filteredItems.length / worksPerSlide));
+                slideIndex = (slideIndex + 1) % totalSlides;
+                renderPortfolio(getActiveFilter());
+            }, 5000);
+        }
+
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
                 slideIndex = 0;
                 renderPortfolio(this.dataset.filter);
+                restartAutoSlide();
             });
         });
 
-                document.getElementById('prevSlideBtn').addEventListener('click', () => {
+        document.getElementById('prevSlideBtn').addEventListener('click', () => {
             const totalSlides = Math.max(1, Math.ceil(filteredItems.length / worksPerSlide));
             slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
-            renderPortfolio(document.querySelector('.filter-btn.active')?.dataset.filter || 'all');
+            renderPortfolio(getActiveFilter());
+            restartAutoSlide();
         });
 
         document.getElementById('nextSlideBtn').addEventListener('click', () => {
             const totalSlides = Math.max(1, Math.ceil(filteredItems.length / worksPerSlide));
             slideIndex = (slideIndex + 1) % totalSlides;
-            renderPortfolio(document.querySelector('.filter-btn.active')?.dataset.filter || 'all');
+            renderPortfolio(getActiveFilter());
+            restartAutoSlide();
         });
 
-        setInterval(() => {
-            const totalSlides = Math.max(1, Math.ceil(filteredItems.length / worksPerSlide));
-            slideIndex = (slideIndex + 1) % totalSlides;
-            renderPortfolio(document.querySelector('.filter-btn.active')?.dataset.filter || 'all');
-        }, 5000);
-
-// Lightbox Functions
         function openLightbox(index) {
             currentImageIndex = index;
             const lightbox = document.getElementById('lightbox');
             const img = document.getElementById('lightboxImg');
             img.src = filteredItems[index].img;
+            img.alt = filteredItems[index].title;
             lightbox.classList.add('active');
+            lightbox.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
         }
 
         function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            lightbox.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = 'auto';
         }
 
@@ -1270,10 +1129,12 @@
             currentImageIndex += direction;
             if (currentImageIndex < 0) currentImageIndex = filteredItems.length - 1;
             if (currentImageIndex >= filteredItems.length) currentImageIndex = 0;
-            document.getElementById('lightboxImg').src = filteredItems[currentImageIndex].img;
+
+            const img = document.getElementById('lightboxImg');
+            img.src = filteredItems[currentImageIndex].img;
+            img.alt = filteredItems[currentImageIndex].title;
         }
 
-        // Keyboard Navigation
         document.addEventListener('keydown', (e) => {
             if (!document.getElementById('lightbox').classList.contains('active')) return;
             if (e.key === 'Escape') closeLightbox();
@@ -1281,32 +1142,19 @@
             if (e.key === 'ArrowRight') changeImage(1);
         });
 
-        // Close lightbox on background click
         document.getElementById('lightbox').addEventListener('click', (e) => {
             if (e.target.id === 'lightbox') closeLightbox();
         });
 
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Active Navigation
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-links a');
 
         window.addEventListener('scroll', () => {
             let current = '';
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - 200) {
+                if (window.scrollY >= sectionTop - 200) {
                     current = section.getAttribute('id');
                 }
             });
@@ -1319,7 +1167,6 @@
             });
         });
 
-        // Scroll Animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1335,14 +1182,15 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Animate skill bars on scroll
         const skillObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
                         const width = bar.style.width;
                         bar.style.width = '0';
-                        setTimeout(() => bar.style.width = width, 100);
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 100);
                     });
                 }
             });
@@ -1350,16 +1198,15 @@
 
         document.querySelectorAll('.resume-card').forEach(card => skillObserver.observe(card));
 
-        // Initialize
         renderPortfolio();
+        restartAutoSlide();
 
-        // Add parallax effect to hero
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const hero = document.querySelector('.hero-content');
             if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-                hero.style.opacity = 1 - (scrolled / 700);
+                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                hero.style.opacity = Math.max(0, 1 - (scrolled / 700));
             }
         });
     </script>
