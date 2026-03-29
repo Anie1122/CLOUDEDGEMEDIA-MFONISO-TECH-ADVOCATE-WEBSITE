@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mfoniso Ubong | Cloud Edge Media</title>
+  <meta name="description" content="Portfolio of Mfoniso Ubong, Tech Advocate, Graphic Designer, and founder of Cloud Edge Media." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#071018;--card:#0d1620;--line:#173246;--text:#f4fbff;--muted:#9ab3c3;--accent:#1ad7ff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,sans-serif;background:radial-gradient(circle at top,#112034 0,#071018 45%,#03070b 100%);color:var(--text)}
+    a{color:inherit} img{max-width:100%;display:block}
+    .wrap{width:min(1120px,92vw);margin:auto}
+    nav{position:sticky;top:0;z-index:20;background:rgba(3,7,11,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:Orbitron,sans-serif;font-weight:700}
+    .brand img{width:38px;height:38px;border-radius:50%}
+    .brand span{letter-spacing:.08em}
+    .links{display:flex;gap:18px;flex-wrap:wrap}.links a{text-decoration:none;color:var(--muted)}.links a:hover{color:var(--accent)}
+    section{padding:72px 0}
+    .hero{padding:72px 0 48px}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .eyebrow{display:inline-flex;gap:10px;align-items:center;padding:8px 14px;border:1px solid rgba(26,215,255,.35);border-radius:999px;background:rgba(26,215,255,.08);color:var(--accent);font-family:Orbitron,sans-serif;font-size:12px;letter-spacing:.08em}
+    h1{font:900 clamp(38px,7vw,74px)/1.02 Orbitron,sans-serif;margin:18px 0 14px}
+    .grad{background:linear-gradient(135deg,#fff 0,var(--accent) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{color:var(--muted);font-size:18px;max-width:680px}
+    .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-block;padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:700}.btn.primary{background:var(--accent);color:#00131c}.btn.secondary{border:1px solid rgba(26,215,255,.4);color:var(--text);background:rgba(255,255,255,.03)}
+    .panel{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:18px;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+    .owner{aspect-ratio:1/1;border-radius:22px;overflow:hidden;background:#0a1016}
+    .owner img{width:100%;height:100%;object-fit:cover}
+    h2{font:700 clamp(28px,4vw,42px)/1.12 Orbitron,sans-serif;margin:0 0 14px}
+    .sub{color:var(--muted);margin:0 0 24px}
+    .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;align-items:center}
+    .skillchips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.chip{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#d9ebf5}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{padding:22px;border-radius:22px;background:var(--card);border:1px solid rgba(255,255,255,.08)} .card h3{margin:0 0 10px;font-family:Orbitron,sans-serif;font-size:18px;color:var(--accent)} .card p,.card li{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.work{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:24px;overflow:hidden}.work img{aspect-ratio:1/1;object-fit:cover;width:100%}.work .meta{padding:16px 18px}.kicker{font:700 12px Orbitron,sans-serif;color:var(--accent);letter-spacing:.08em}
+    .cats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-bottom:28px}.cat{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden}.cat img{aspect-ratio:1/1;object-fit:cover;width:100%}.cat div{padding:12px;font-weight:700;font-size:14px}
+    .socials{display:flex;gap:14px;flex-wrap:wrap}.social{padding:14px 18px;border-radius:16px;text-decoration:none;background:var(--card);border:1px solid rgba(255,255,255,.08)}
+    footer{padding:28px 0 40px;color:var(--muted);border-top:1px solid rgba(255,255,255,.08);margin-top:22px}
+    @media (max-width:900px){.hero-grid,.about,.cards,.grid{grid-template-columns:1fr}.cats{grid-template-columns:repeat(2,minmax(0,1fr))}.links{display:none}}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap nav">
+      <a class="brand" href="#home"><img src="assets/logo-cloud-edge.svg" alt="Cloud Edge Media logo"><span>CLOUD EDGE MEDIA</span></a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">TECH ADVOCATE • GRAPHIC DESIGNER • MEDIA CREATIVE</div>
+        <h1><span class="grad">Mfoniso</span> Ubong</h1>
+        <p class="lead">I help brands, churches, creators, and businesses stand out with clear visuals, modern flyer design, branded content, and smart digital creativity through Cloud Edge Media.</p>
+        <div class="cta">
+          <a class="btn primary" href="#portfolio">View Portfolio</a>
+          <a class="btn secondary" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="panel owner"><img src="assets/mfoniso-owner-card.svg" alt="Mfoniso Ubong portfolio owner card"></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="panel"><img src="assets/logo-cloud-edge.svg" alt="Cloud Edge Media brand logo" style="width:140px;margin:0 auto 18px"><p class="sub" style="margin:0">Cloud Edge Media is the creative identity behind Mfoniso Ubong’s design, branding, and media work.</p></div>
+      <div>
+        <h2>About the Portfolio</h2>
+        <p class="sub">This portfolio showcases selected works across flyer design, brand visuals, church media, promotional content, and creative concept graphics.</p>
+        <div class="skillchips">
+          <span class="chip">Brand Flyer Designs</span>
+          <span class="chip">Church Flyer Designs</span>
+          <span class="chip">Photo Editing / Recovery</span>
+          <span class="chip">Event Coverage / Videography</span>
+          <span class="chip">Brand / Visual Identity</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>What I Do</h2>
+      <p class="sub">Creative services built for visibility, engagement, and stronger brand presentation.</p>
+      <div class="cards">
+        <div class="card"><h3>Brand & Flyer Design</h3><p>Promotional visuals, ads, church flyers, campaign creatives, and brand-focused graphics.</p></div>
+        <div class="card"><h3>Visual Identity</h3><p>Logo-centered visuals, branded layouts, and design systems that make brands look consistent.</p></div>
+        <div class="card"><h3>Photo Editing</h3><p>Cleanup, recovery, enhancement, and polished visual treatments for portraits and content pieces.</p></div>
+        <div class="card"><h3>Media Support</h3><p>Creative direction for event content, awareness visuals, and digital-first promotional assets.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="wrap">
+      <h2>Portfolio Categories</h2>
+      <p class="sub">These are the featured categories currently on the site.</p>
+      <div class="cats">
+        <div class="cat"><img src="assets/works/event-coverage-videography.jpg" alt="Event Coverage / Videography"><div>Event Coverage / Videography</div></div>
+        <div class="cat"><img src="assets/works/brand-flyer-designs.jpg" alt="Brand Flyer Designs"><div>Brand Flyer Designs</div></div>
+        <div class="cat"><img src="assets/works/photo-editing-recovery.jpg" alt="Photo Editing / Recovery"><div>Photo Editing / Recovery</div></div>
+        <div class="cat"><img src="assets/works/church-flyer-designs.jpg" alt="Church Flyer Designs"><div>Church Flyer Designs</div></div>
+        <div class="cat"><img src="assets/works/brand-visual-identity.jpg" alt="Brand / Visual Identity"><div>Brand / Visual Identity</div></div>
+      </div>
+
+      <h2 style="margin-top:30px">Selected Works</h2>
+      <p class="sub">A clean preview of some of your uploaded designs.</p>
+      <div class="grid">
+        <article class="work"><img src="assets/works/shop-your-gadgets.svg" alt="Shop Your Gadgets"><div class="meta"><div class="kicker">Brand Flyer Design</div><strong>Shop Your Gadgets</strong></div></article>
+        <article class="work"><img src="assets/works/wanna-make-cool-cash.svg" alt="Wanna Make Cool Cash"><div class="meta"><div class="kicker">Brand Flyer Design</div><strong>Wanna Make Cool Cash</strong></div></article>
+        <article class="work"><img src="assets/works/energy-reload.svg" alt="Energy Reload"><div class="meta"><div class="kicker">Brand Flyer Design</div><strong>Energy Reload</strong></div></article>
+        <article class="work"><img src="assets/works/ash-wednesday.svg" alt="Ash Wednesday"><div class="meta"><div class="kicker">Church Flyer Design</div><strong>Ash Wednesday</strong></div></article>
+        <article class="work"><img src="assets/works/elevate-your-brand.svg" alt="Elevate Your Brand"><div class="meta"><div class="kicker">Brand / Visual Identity</div><strong>Elevate Your Brand</strong></div></article>
+        <article class="work"><img src="assets/works/one-bite-shawarma.svg" alt="One Bite Shawarma"><div class="meta"><div class="kicker">Brand Flyer Design</div><strong>One Bite Shawarma</strong></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Connect With Me</h2>
+      <p class="sub">Use the links below to follow the brand and reach the portfolio owner.</p>
+      <div class="socials">
+        <a class="social" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/mfoniso_ubong?igsh=MXE1ODI3NDhsMmNiaw==">Instagram</a>
+        <a class="social" target="_blank" rel="noopener noreferrer" href="https://x.com/MfonisoUbong">X</a>
+        <a class="social" target="_blank" rel="noopener noreferrer" href="https://www.threads.com/@mfoniso_ubong">Threads</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© 2026 Mfoniso Ubong • Cloud Edge Media</div>
+  </footer>
+</body>
+</html>
